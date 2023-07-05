@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삼아제약</title>
+    <link rel="stylesheet" href="./css/fullpage.css" type="text/css">
+    <link rel="stylesheet" href="./css/swiper.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/slick.css" type="text/css">
+    <link rel="stylesheet" href="./css/slick-theme.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="./script/jquery-3.6.4.min.js"></script>
+    <script src="./script/swiper-bundle.min.js"></script>
+    <script src="./script/slick.min.js"></script>
+    <script src="./script/fullpage.min.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="https://kit.fontawesome.com/ccc644598d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href="#"><img src="./images/logo.png" alt="logo"></a>삼아제약</h1>
+        <nav>
+            <h2 class="hidden">메인메뉴</h2>
+            <ul class="menu">
+                <li><a href="#">회사소개</a>
+                    <ul class="submenu">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">경영이념</a></li>
+                        <li><a href="#">가치</a></li>
+                        <li><a href="#">연혁 및 수상</a></li>
+                        <li><a href="#">조직안내</a></li>
+                        <li><a href="#">공장소개</a></li>
+                        <li><a href="#">지점안내</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">제품소개</a>
+                    <ul class="submenu">
+                        <li><a href="#">제품검색</a></li>
+                        <li><a href="#">제품변경정보</a></li>
+                        <li><a href="#">제품Q&A</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">R&D</a>
+                    <ul class="submenu">
+                        <li><a href="#">개발전략</a></li>
+                        <li><a href="#">연구소 조직도</a></li>
+                        <li><a href="#">주요 연구실적</a></li>
+                        <li><a href="#">제휴사 현황</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">투자정보</a>
+                    <ul class="submenu">
+                        <li><a href="#">재무정보</a></li>
+                        <li><a href="#">주가정보</a></li>
+                        <li><a href="#">주식시세</a></li>
+                        <li><a href="#">공시자료</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">미디어룸</a>
+                    <ul class="submenu">
+                        <li><a href="#">삼아소식</a></li>
+                        <li><a href="#">사회공헌</a></li>
+                        <li><a href="#">광고보기</a></li>
+                        <li><a href="#">브랜드스토리</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">인재채용</a>
+                    <ul class="submenu">
+                        <li><a href="#">인사제도</a></li>
+                        <li><a href="#">채용정보</a></li>
+                        <li><a href="#">인재상</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="submenu_bg"></div>
+    </header>
+    <div id="fullpage">
+        <div class="section first slide">
+            <h2 class="hidden">회사소개</h2>
+            <div class="swiper-container mainslide">
+                <div class="swiper-wrapper mainslide-wrapper">
+                    <div class="swiper-slide m_slide">
+                        <a href="#"><img src="./images/mainslide1.jpg" alt="신약실험">
+                            <div class="slide_text">
+                                <p class="text1">Quality of Life</p>
+                                <p class="text2">제약 정도경영</p>
+                                <p class="text3">삼아제약은 정도경영의 길을 걸으며<br>
+                                    건전한 기업문화를 선도해 나갑니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide m_slide">
+                        <a href="#"><img src="./images/mainslide2.jpg" alt="아버지와아이">
+                            <div class="slide_text">
+                                <p class="text1">Human Respect</p>
+                                <p class="text2">인간 존중경영</p>
+                                <p class="text3">삼아제약은 인간의 존엄성과<br>
+                                    생명존중 의식을 실현해 나갑니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide m_slide">
+                        <a href="#"><img src="./images/mainslide3.jpg" alt="바이오연구">
+                            <div class="slide_text">
+                                <p class="text1">Global Innovation</p>
+                                <p class="text2">글로벌 혁신의 삼아</p>
+                                <p class="text3">삼아제약은 혁신적인 신제품을 가지고<br>
+                                    세계시장을 향해 역량을 넓혀 가고 있습니다.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-pagination mainslide_pagination"></div>
+            </div>
+        </div>
+
+        <div class="section second products">
+            <h2 class="hidden">제품소개</h2>
+            <div class="product_wrap">
+                <div class="search">
+                    <select class="option1" id="option1" name="option1" onchange="option1(this)">
+                        <option value="의약품 선택">의약품 선택</option>
+                        <option value="전문의약품">전문의약품</option>
+                        <option value="일반의약품">일반의약품</option>
+                        <option value="노마제품">노마제품</option>
+                    </select>
+                    <select class="option2" id="option2" name="option2">
+                        <option>효능별 선택</option>
+                    </select>
+                    <input maxlength="30" placeholder="제품명, 유효성분명 등을 입력해주십시오." autocomplete="off">
+                </div>
+                <div class="bottom">
+                    <div class="left_box">
+                        <h3>Products</h3>
+                        <p>삼아제약의 다양한 제품을 소개합니다</p>
+                        <div class="btnbox">
+                            <div class="inquiry">
+                                <div class="shortcut"><a href="#">제품 문의하기</a> <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="search_pharm">
+                                <div class="shortcut"><a href="#">판매약국 찾기</a> <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products_slide">
+                        <div class="p_slide">
+                            <img src="./images/노마 (웹큰).png" alt="노마골드">
+                            <div class="products_info">
+                                <h3>노마골드 츄정</h3>
+                                <div class="info_text">
+                                    <div class="left">
+                                        <ul>
+                                            <li>분류</li>
+                                            <li>보험코드 및 약가</li>
+                                            <li>원료약품 및 분량</li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>건강기능식품 - 비타민·무기질제품</li>
+                                            <li>비급여</li>
+                                            <li>제이인산칼슘, 비타민C혼합분말,
+                                                dl-α-토코페릴아세테이트,
+                                                니코틴산아미드, 비타민B12혼합분말,
+                                                비타민A혼합분말, 비타민B6염산염 등</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shortcut"><a href="#">제품 자세히보기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="p_slide">
+                            <img src="./images/카바딜플러스정.png" alt="카바딜플러스정">
+                            <div class="products_info">
+                                <h3>노마골드 츄정</h3>
+                                <div class="info_text">
+                                    <div class="left">
+                                        <ul>
+                                            <li>분류</li>
+                                            <li>보험코드 및 약가</li>
+                                            <li>원료약품 및 분량</li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>건강기능식품 - 비타민·무기질제품</li>
+                                            <li>비급여</li>
+                                            <li>제이인산칼슘, 비타민C혼합분말,
+                                                dl-α-토코페릴아세테이트,
+                                                니코틴산아미드, 비타민B12혼합분말,
+                                                비타민A혼합분말, 비타민B6염산염 등</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shortcut"><a href="#">제품 자세히보기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="p_slide">
+                            <img src="./images/알로테드정1mg.png" alt="알로테드정">
+                            <div class="products_info">
+                                <h3>노마골드 츄정</h3>
+                                <div class="info_text">
+                                    <div class="left">
+                                        <ul>
+                                            <li>분류</li>
+                                            <li>보험코드 및 약가</li>
+                                            <li>원료약품 및 분량</li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>건강기능식품 - 비타민·무기질제품</li>
+                                            <li>비급여</li>
+                                            <li>제이인산칼슘, 비타민C혼합분말,
+                                                dl-α-토코페릴아세테이트,
+                                                니코틴산아미드, 비타민B12혼합분말,
+                                                비타민A혼합분말, 비타민B6염산염 등</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shortcut"><a href="#">제품 자세히보기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="p_slide">
+                            <img src="./images/노마 (웹큰).png" alt="노마골드">
+                            <div class="products_info">
+                                <h3>노마골드 츄정</h3>
+                                <div class="info_text">
+                                    <div class="left">
+                                        <ul>
+                                            <li>분류</li>
+                                            <li>보험코드 및 약가</li>
+                                            <li>원료약품 및 분량</li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>건강기능식품 - 비타민·무기질제품</li>
+                                            <li>비급여</li>
+                                            <li>제이인산칼슘, 비타민C혼합분말,
+                                                dl-α-토코페릴아세테이트,
+                                                니코틴산아미드, 비타민B12혼합분말,
+                                                비타민A혼합분말, 비타민B6염산염 등</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shortcut"><a href="#">제품 자세히보기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="p_slide">
+                            <img src="./images/카바딜플러스정.png" alt="카바딜플러스정">
+                            <div class="products_info">
+                                <h3>노마골드 츄정</h3>
+                                <div class="info_text">
+                                    <div class="left">
+                                        <ul>
+                                            <li>분류</li>
+                                            <li>보험코드 및 약가</li>
+                                            <li>원료약품 및 분량</li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>건강기능식품 - 비타민·무기질제품</li>
+                                            <li>비급여</li>
+                                            <li>제이인산칼슘, 비타민C혼합분말,
+                                                dl-α-토코페릴아세테이트,
+                                                니코틴산아미드, 비타민B12혼합분말,
+                                                비타민A혼합분말, 비타민B6염산염 등</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shortcut"><a href="#">제품 자세히보기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="p_slide">
+                            <img src="./images/알로테드정1mg.png" alt="알로테드정">
+                            <div class="products_info">
+                                <h3>노마골드 츄정</h3>
+                                <div class="info_text">
+                                    <div class="left">
+                                        <ul>
+                                            <li>분류</li>
+                                            <li>보험코드 및 약가</li>
+                                            <li>원료약품 및 분량</li>
+                                        </ul>
+                                    </div>
+                                    <div class="right">
+                                        <ul>
+                                            <li>건강기능식품 - 비타민·무기질제품</li>
+                                            <li>비급여</li>
+                                            <li>제이인산칼슘, 비타민C혼합분말,
+                                                dl-α-토코페릴아세테이트,
+                                                니코틴산아미드, 비타민B12혼합분말,
+                                                비타민A혼합분말, 비타민B6염산염 등</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="shortcut"><a href="#">제품 자세히보기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section third investment_info">
+            <h2 class="hidden">투자정보</h2>
+            <div class="info_wrap">
+                <div class="info_box">
+                    <h3>공시정보</h3>
+                    <div class="text_box">
+                        <a href="#">
+                            <p class="name">삼아제약(009300)</p>
+                            <p class="title">분기보고서 (2023.03)</p>
+                            <p class="date">2023.05.15</p>
+                        </a>
+                    </div>
+                    <div class="shortcut"><a href="#">공시정보 바로가기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+                <div class="info_box">
+                    <h3>주가정보</h3>
+                    <div class="text_box">
+                        <a href="#">
+                            <p class="name">삼아제약(009300)</p>
+                            <p class="title">18,000KRW<span>-120(0.66%)</span></p>
+                            <p class="date">6월 21일 오후 3:30분기준</p>
+                        </a>
+                    </div>
+                    <div class="shortcut"><a href="#">주가정보 바로가기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+                <div class="info_box">
+                    <h3>IR정보</h3>
+                    <div class="text_box">
+                        <a href="#">
+                            <p class="name">삼아제약(009300)</p>
+                            <p class="title">제 50기 결산재무제표 공고</p>
+                            <p class="date">2023.03.30</p>
+                        </a>
+                    </div>
+                    <div class="shortcut"><a href="#">IR정보 바로가기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="section fourth mediaroom">
+            <h2 class="hidden">미디어룸</h2>
+            <h3>미디어룸</h3>
+            <div class="media_wrap">
+                <div class="news_box">
+                    <a href="#">
+                        <h4>삼아제약, 임직원 참여 아동보육 시설 봉사활동 전개</h4>
+                        <p class="text">삼아제약(대표이사 허준)은 20일, 가정의 달을 맞아 강원도 원주지역 아동보육시설 3곳(심향영육아원,
+                            성애원, 원주아동센터)을 방문해 봉사활동을 전개했다고 22일 밝혔다...</p>
+                    </a>
+                    <p class="date">2023.03.08</p>
+                </div>
+                <div class="news_box">
+                    <a href="#">
+                        <h4>삼아제약, 직원 건강도 챙기고 업무효율도 높이고</h4>
+                        <p class="text">삼아제약의 직원 챙기기가 또 다시 화제이다. 일과 시간 중 1시간을 피트니스시간으로 정하고 회사에서 비용까지 지불해 주며 독려하고 있다.
+                            피트니스는 직장인의 건강을... </p>
+                    </a>
+                    <p class="date">2023.01.14</p>
+                </div>
+                <div class="news_box">
+                    <a href="#">
+                        <h4>직원 복지에 '으뜸'인 삼아제약</h4>
+                        <p class="text">직원 복지에 '으뜸'인 삼아제약임직원 본인 및 직계 가족 의료기관 이용 본인부담금도 회사가 부담. 최근 삼아제약의 직원복지제도가 진화하고
+                            있다.
+                            기존 의료복지제도의 확대가 이뤄진 것이다. 삼아제약은...</p>
+                    </a>
+                    <p class="date">2023.01.14</p>
+                </div>
+                <div class="news_box">
+                    <a href="#">
+                        <h4>삼아제약 , 22년에도 아동보육시설에 기부금 전달</h4>
+                        <p class="text">삼아제약(대표 허준)은 지난 9일 강원도 원주지역의 보육시설(심향영육아원, 원주아동센터, 성애원)에
+                            기부금과 함께 후원물품을 전달했다고 14일 밝혔다. 아동보육시설 지원은 삼아제약이 12년째...</p>
+                    </a>
+                    <p class="date">2023.01.14</p>
+                </div>
+            </div>
+            <div class="shortcut"><a href="#">삼아소식 더보기</a></div>
+        </div>
+        <div class="section fifth recruitment">
+            <h2 class="hidden">인재채용</h2>
+            <h3>인재상</h3>
+            <div class="talent_wrap">
+                <div class="img_box"><img src="./images/recruitment.jpg" alt="영업사원"></div>
+                <div class="text_box">
+                    <h4>삼아제약에서 가슴뛰는 삶에 도전하세요</h4>
+                    <p class="text">천편일률적인 제도하에서 획일화된 인재로 양성된 분들은 정중히 사양합니다<br>
+                        열정적인 의지, 끊임없이 새로운 것을 찾아 나가는 창조적인 사고, 투철한 책임의식을 지닌 분들만<br> 삼아제약의 문을 두드리십시오.<br>
+                        인간의 소중한 생명에 건강이라는 테마를 불어 넣는일 삼아제약 추구하는 채용이 곧 국민건강의 밑거름입니다.<br>
+                        삼아제약은 ‘자기완성’이라는 경영이념을 실현하고, 개인과 조직이 더불어 성장할 수 있도록 공정한 인사를 추구합니다.
+                    </p>
+                    <ul>
+                        <li>#자기개발 중시</li>
+                        <li>#공정한 평가</li>
+                        <li>#평가에 따른 보상</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>채용정보</h3>
+            <div class="recruit_wrap">
+                <div class="recruit_step">
+                    <h4>채용절차</h4>
+                    <ul>
+                        <li class="icon"><i class="fa-regular fa-paste"></i>
+                            <p>서류전형</p>
+                        </li>
+                        <li class="arrow"><i class="fa-solid fa-chevron-right"></i></li>
+                        <li class="icon"><i class="fa-regular fa-comments"></i>
+                            <p>1차면접<br>(실무진면접)</p>
+                        </li>
+                        <li class="arrow"><i class="fa-solid fa-chevron-right"></i></li>
+                        <li class="icon"><i class="fa-solid fa-users-line"></i>
+                            <p>2차면접<br>(임원면접)</p>
+                        </li>
+                        <li class="arrow"><i class="fa-solid fa-chevron-right"></i></li>
+                        <li class="icon"><i class="fa-solid fa-stethoscope"></i>
+                            <p>신체검사<br>및 건강검진</p>
+                        </li>
+                        <li class="arrow"><i class="fa-solid fa-chevron-right"></i></li>
+                        <li class="icon"><i class="fa-regular fa-address-card"></i>
+                            <p>최종합격</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shortcut_box">
+                    <div class="shortcut1"><a href="#">직무소개 바로가기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="shortcut2"><a href="#">채용공고 바로가기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                    <div class="shortcut3"><a href="#">채용관련 바로가기</a> <i class="fa-solid fa-chevron-right"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="section fp-auto-height">
+            <footer>
+                <div class="f_logo">
+                    <a href="#"><img src="./images/f_logo.png" alt="푸터로고"></a>
+                </div>
+                <div class="f_right">
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">법적고기</a></li>
+                            <li><a href="#">이메일주소무단수집거부</a></li>
+                            <li><a href="#">고객지원</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_text">
+                        <ul>
+                            <li>강원도 원주시 문막읍동화공단로49</li>
+                            <li>대표전화 : 02)2056-7200</li>
+                            <li>소비자상담실 : 02)2056-7272</li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>Copyrightⓒ 2023 SAMA PHARM CO., LTD. All rights reserved</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <ul id="nav_menu">
+        <li data-menuanchor="first"><a href="#first" class="awesome_icon"><span>회사소개</span></a></li>
+        <li data-menuanchor="second"><a href="#second" class="awesome_icon"><span>제품소개</span></a></li>
+        <li data-menuanchor="third"><a href="#third" class="awesome_icon"><span>투자정보</span></a></li>
+        <li data-menuanchor="fourth"><a href="#fourth" class="awesome_icon"><span>미디어룸</span></a></li>
+        <li data-menuanchor="fifth"><a href="#fifth" class="awesome_icon"><span>인재채용</span></a></li>
+    </ul>
+</body>
+
+</html>
