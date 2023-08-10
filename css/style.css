@@ -19,6 +19,7 @@ html{
 body {
     position: relative;
     font-family: 'Noto sans KR', sans-serif;
+    box-sizing: border-box;
 }
 .hidden {
     position: absolute;
@@ -31,55 +32,49 @@ body {
 /* header,메인메뉴 */ 
 header {
     width: 100%;
+    min-width: 1200px;
     height: 80px;
     position: fixed;
     z-index: 999;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid #0080c8;
 }
 
 header .logo {
     display: block;
-    width: 200px;
-    height: 80px;
+    width: 15%;
+    min-width: 200px;
+    margin-left: 10%;
     font-size: 0; 
-    margin: 29px 29px 0px 300px;
 }
 
 header .logo img{
-    width: 200px;
+    max-width: 100%;
 } 
 
 nav{
     width: 100%;
     height: 100%;
-    margin-left: 120px;
 }
 
 nav .menu{
-    width: 850px;
-    height: 100%;
+    width: 100%;
     position: relative;
     z-index: 99;
-    display: flex;      
+    display: flex;
+    justify-content: space-evenly;     
 }
 
 nav .menu>li{
     z-index: 999;
-    width: 17%;
-    height: 100%;
     line-height: 80px;
-    margin-right: 32px;
     text-align: center;
-}
-
-nav .menu>li:last-child{
-    margin-right: 0px;
 }
 nav .menu>li>a{
     justify-content: center;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     color: #eee;
 }
@@ -102,7 +97,7 @@ nav .submenu>li {
 
 nav .submenu>li>a {
     display: block;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #222;
 }
@@ -130,6 +125,7 @@ nav .submenu>li>a:hover {
 .mainslide {
     position: relative;
     width: 100%;
+    min-width: 1200px;
     overflow: hidden;
 }
 .mainslide .mainslide-wrapper{
@@ -144,7 +140,7 @@ nav .submenu>li>a:hover {
 }
 .mainslide .mainslide-wrapper .m_slide img{
     max-width: 100%;
-    object-fit: cover;
+    object-fit : cover;
 }
 
 .mainslide .mainslide-wrapper .m_slide::after{
@@ -166,26 +162,26 @@ nav .submenu>li>a:hover {
 }
 .mainslide .mainslide-wrapper .m_slide .slide_text .text1{
     color: #67b5e3;
-    font-size: 35px;
+    font-size: 3.5rem;
     font-weight: 600;
     line-height: 40px;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 10px #444;
+    text-shadow: 1px 1px 2px #444;
 }
 .mainslide .mainslide-wrapper .m_slide .slide_text .text2{
     color: #0080c8;
-    font-size: 50px;
+    font-size: 5rem;
     line-height: 60px;
     font-weight: 600;
     margin-bottom: 10px;
-    text-shadow: 2px 2px 10px #444;
+    text-shadow: 1px 1px 2px #444;
 }
 .mainslide .mainslide-wrapper .m_slide .slide_text .text3{
     color: #fff;
-    font-size: 25px;
+    font-size: 2.5rem;
     line-height: 40px;
     font-weight: 600;
-    text-shadow: 2px 2px 10px #444;
+    text-shadow: 1px 1px 2px #444;
 }
 .mainslide .mainslide_pagination{
     position: absolute;
@@ -199,9 +195,9 @@ nav .submenu>li>a:hover {
 .mainslide .swiper-pagination-bullet{
     background: none;
     color: #fff;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 700;
-    padding-bottom: 8px;
+    padding-bottom: 5%;
     cursor: pointer;
 }
 
@@ -219,9 +215,9 @@ nav .submenu>li>a:hover {
     background: url(../images/products_bg.jpg), lightgray 50% / cover no-repeat;
 }
 .products .product_wrap{
-    width: 62.5%;
-    min-width: 600px;
-    height: 650px;
+    width: 63%;
+    min-width: 1000px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,7 +226,7 @@ nav .submenu>li>a:hover {
 } 
 .products .product_wrap .search{
     width: 100%;
-    height: 120px;
+    height: 12vh;
     background-color: #1d3666;
     border-radius: 10px;
     display: flex;
@@ -240,10 +236,10 @@ nav .submenu>li>a:hover {
 }
 .products .product_wrap .search .option1,
 .products .product_wrap .search .option2{
-    width: 120px;
-    height: 40px;
+    width: 10%;
+    height: 4vh;
     color: #222;
-    font-size: 15px;
+    font-size: 1.5rem;
     text-align: center;
     font-weight: 600;
     line-height: 40px;
@@ -253,20 +249,20 @@ nav .submenu>li>a:hover {
     margin-right: 20px;
 }
 .products .product_wrap .search input{
-    width: 600px;
-    height: 30px;
-    padding: 10px 30px;
+    width: 50%;
+    height: 4vh;
+    padding: 1rem 3rem;
     color: #808080;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 500;
-    line-height: 50px;
+    line-height: 100%;
     border: none; 
     border-radius: 10px;
     background: #FFF;
 }
 .products .product_wrap .bottom{
     width: 100%;
-    height: 500px;
+    height: 55vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -281,13 +277,16 @@ nav .submenu>li>a:hover {
 .products .product_wrap .bottom .left_box h3{
     position: absolute;
     top : 30px;
-    font-size: 30px;
+    left: 10px;
+    color: #1d3666;
+    font-size: 3rem;
     font-weight: 700;
 }
 .products .product_wrap .bottom .left_box p{
     position: absolute;
     top : 180px;
-    font-size: 20px;
+    left: 10px;
+    font-size: 2rem;
     font-weight: 500;
 }
 .products .product_wrap .bottom .left_box .btnbox{
@@ -307,11 +306,11 @@ nav .submenu>li>a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500; 
 }
 .products .product_wrap .bottom .left_box .btnbox .inquiry:hover{
-    font-size: 17px;
+    font-size: 1.7rem;
     background-color: #fff;
     color: #2661D2;
     transition: all 0.2s;
@@ -326,11 +325,11 @@ nav .submenu>li>a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500
 }
 .products .product_wrap .bottom .left_box .btnbox .search_pharm:hover{
-    font-size: 17px;
+    font-size: 1.7rem;
     background-color: #fff;
     color: #2661D2;
     transition: all 0.2s;
@@ -363,20 +362,20 @@ nav .submenu>li>a:hover {
 }
 
 .products .product_wrap .bottom .products_slide .slick-dots li{
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
 }
 .products .product_wrap .bottom .products_slide .slick-dots li button{
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50px;
 }
 
 .products .product_wrap .bottom .products_slide .slick-dots li button:before{
-    font-size: 60px;
+    font-size: 6rem;
     line-height: 30px;
-    width: 15px;
-    height: 15px;
+    width: 1.5rem;
+    height: 1,5rem;
     opacity: 1;
     color: #fff;
 }
@@ -390,13 +389,13 @@ nav .submenu>li>a:hover {
     position: absolute;
     top : 93%;
     font-size: 0px;
-    width: 30px;  
-    height: 30px;
+    width: 3rem;  
+    height: 3rem;
     z-index: 1;
 }
  
 .products .product_wrap .bottom .products_slide .slick-prev {
-    left : 5%;
+    left : 4%;
 }
  
 .products .product_wrap .bottom .products_slide .slick-prev:after {
@@ -404,12 +403,12 @@ nav .submenu>li>a:hover {
     background-size: 100%;  
     content: "";
     display: inline-block;
-    width: 30px;  
-    height: 30px;
+    width: 3rem;  
+    height: 3rem;
 }
  
 .products .product_wrap .bottom .products_slide .slick-next {
-    left : 41%;
+    left : 42%;
 }
  
 .products .product_wrap .bottom .products_slide .slick-next:after{
@@ -417,12 +416,12 @@ nav .submenu>li>a:hover {
     background-size: 100%;  
     content: "";
     display: inline-block;
-    width: 30px;  
-    height: 30px;
+    width: 3rem;  
+    height: 3rem;
 }
 .products .product_wrap .bottom .products_slide .p_slide .products_info{
     width: 50%;
-    height: 500px;
+    height: 50vh;
     background-color: rgb(255, 255, 255, 0.8);
     border-radius: 10px;
     display: flex;
@@ -436,7 +435,7 @@ nav .submenu>li>a:hover {
     position: absolute;
     top : 30px;
     left: 30px;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 700;
     color: #1d3666;
 }
@@ -449,17 +448,17 @@ nav .submenu>li>a:hover {
 
 .products .product_wrap .bottom .products_slide .products_info .info_text .left{
     width: 35%;
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 500;
     margin-bottom: 100px;
-    padding-left: 30px;
+    padding-left: 7%;
 }
 .products .product_wrap .bottom .products_slide .products_info .info_text .right{
     width: 65%;
-    font-size: 14px;
+    font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: 100px;
-    padding-right: 30px;
+    padding-right: 7%;
 }
 .products .product_wrap .bottom .products_slide .products_info .info_text .left li,
 .products .product_wrap .bottom .products_slide .products_info .info_text .right li{  
@@ -467,12 +466,12 @@ nav .submenu>li>a:hover {
     margin-bottom: 5px;
 }
 .products .product_wrap .bottom .products_slide .products_info .shortcut{
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #222;
 }
 .products .product_wrap .bottom .products_slide .products_info .shortcut:hover{
-    font-size: 17px;
+    font-size: 1.7rem;
     color: #2661D2;
     transition: all 0.2s;
 }
@@ -487,8 +486,9 @@ nav .submenu>li>a:hover {
     background: url(../images/inverstment_bg.jpg), lightgray 50% / cover no-repeat;
 }
 .investment_info .info_wrap{
-    width: 1200px;
-    height: 500px;
+    width: 65%;
+    min-width: 1000px;
+    height: 45vh;
     display: flex;
     margin: auto;
     
@@ -496,8 +496,8 @@ nav .submenu>li>a:hover {
 .investment_info .info_wrap .info_box{
     width: 33%;
     height: 100%;
-    margin: 20px;
-    padding: 30px;
+    margin: 1%;
+    padding: 3%;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     display: flex;
@@ -514,38 +514,38 @@ nav .submenu>li>a:hover {
     position: absolute;
     top : 30px;
     left: 30px;
-    font-size:30px;
+    font-size:3rem;
     font-weight: 700;
     color: #1d3666;
 }
 .investment_info .info_wrap .info_box .text_box .name{
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
     color: #0080c8;
     margin-bottom: 20px;
 }
 .investment_info .info_wrap .info_box .text_box .title{
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 25px;
 }
 .investment_info .info_wrap .info_box .text_box .title span{
-    font-size: 14px;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #2661D2;
     margin-left: 10px;
 }
 .investment_info .info_wrap .info_box .text_box .date{
-    font-size: 12px;
+    font-size: 1.4rem;
     font-weight: 500;
 }
 .investment_info .info_wrap .info_box .shortcut{
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
     color: #222;    
 }
 .investment_info .info_wrap .info_box .shortcut:hover{
-    font-size: 17px;
+    font-size: 1.7rem;
     color: #2661D2;
     transition: all 0.2s;
 }
@@ -561,24 +561,31 @@ nav .submenu>li>a:hover {
     align-items: center;
     flex-direction: column;
 }
-.mediaroom h3{
-    font-size:25px;
-    font-weight: 500;
-    color: #fff;
-}
+
 .mediaroom .media_wrap{
-    width: 850px;
-    height: 650px;
+    width: 65%;
+    min-width: 800px;
+    height: 600px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 30px auto;
+    margin: 7% auto;
+    position: relative;
+}
+.mediaroom h3{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
 }
 .mediaroom .media_wrap .news_box{
     width: 100%;
-    height: 130px;
-    margin-bottom: 20px;
-    padding: 20px 20px;
+    height: 150px;
+    margin-bottom: 5%;
+    padding: 3%;
     background-color: rgba(248, 248, 248, 0.65);
     border-radius: 10px;
     display: flex;
@@ -592,31 +599,33 @@ nav .submenu>li>a:hover {
     transition: all 0.5s;
 }
 .mediaroom .media_wrap .news_box h4{
-    font-size : 20px;
+    font-size : 2rem;
     font-weight: 500;
     color: #1d3666;
     margin-bottom: 10px;
 }
 .mediaroom .media_wrap .news_box .text{
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 10px;
 }
 .mediaroom .media_wrap .news_box .date{
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #0080c8;
 }
 .mediaroom .shortcut{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 150px;
     height: 25px;
-    margin: auto;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 700;
+    text-align: center;
     color: #fff;    
 }
 .mediaroom .shortcut:hover{
-    transform: translateY(-5px);
     color: #0080c8;
     transition: all 0.3s;
 }
@@ -632,24 +641,25 @@ nav .submenu>li>a:hover {
     flex-direction: column;
 }
 .recruitment h3{
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
 .recruitment .talent_wrap{
-    width: 1100px;
+    width: 65%;
+    min-width: 1000px;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 2%;
     background-color: rgba(248, 248, 248, 0.65);
     border-radius: 10px;
     margin-bottom: 30px;
 }
 .recruitment .talent_wrap .img_box{
-    width: 200px;
-    height: 200px;
+    width: 20%;
+    height: auto;
 }
 .recruitment .talent_wrap .img_box img{
     width: 100%;
@@ -658,21 +668,20 @@ nav .submenu>li>a:hover {
 }
 
 .recruitment .talent_wrap .text_box{
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 700px;
-    height: 250px;
-    padding: 20px;
+    padding: 1%;
 }
 .recruitment .talent_wrap .text_box h4{
-    font-size : 25px;
+    font-size : 2.5rem;
     font-weight: 700;
     color: #1d3666;
     margin-bottom: 10px;
 }
 .recruitment .talent_wrap .text_box p{
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 20px;
     font-weight: 500;
     margin-bottom: 10px;
@@ -681,18 +690,19 @@ nav .submenu>li>a:hover {
     display: flex;
 }
 .recruitment .talent_wrap .text_box ul li{
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 700;
     margin-right: 20px;
     color: #0080c8;
 }
 .recruitment .recruit_wrap{
-    width: 1100px;
+    width: 65%;
+    min-width: 1000px;
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 2%;
     background-color: rgba(248, 248, 248, 0.65);
     border-radius: 10px;
     margin-bottom: 15px;
@@ -712,9 +722,9 @@ nav .submenu>li>a:hover {
     justify-content: space-between;
 }
 .recruitment .recruit_wrap .recruit_step ul .icon{
-    width: 100px;
-    height: 100px;    
-    font-size : 50px;
+    width: 10rem;
+    height: 10rem;    
+    font-size : 5rem;
     font-weight: 600;
     text-align: center;
     line-height: 100px;
@@ -723,7 +733,7 @@ nav .submenu>li>a:hover {
 }
 .recruitment .recruit_wrap .recruit_step ul .icon p{
     color: #1d3666;
-    font-size : 15px;
+    font-size : 1.5rem;
     text-align: center;
     line-height: 20px;
     font-weight: 500
@@ -741,15 +751,15 @@ nav .submenu>li>a:hover {
     background-color: rgba(0, 127, 200, 0.8);
 }
 .recruitment .recruit_wrap .recruit_step ul .arrow{
-    width: 20px;
+    width: 2%;
     height: 100px;
-    font-size : 20px;
+    font-size : 2rem;
     text-align: center;
     line-height: 100px; 
 }
 
 .recruitment .recruit_wrap .shortcut_box{
-    width: 250px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -762,7 +772,7 @@ nav .submenu>li>a:hover {
     height: 65px;
     text-align: center;
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 700;
     line-height: 65px;
     border-radius: 10px;
@@ -771,7 +781,7 @@ nav .submenu>li>a:hover {
     background-color: rgb(0, 128, 200, 0.5);
 }
 .recruitment .recruit_wrap .shortcut_box .shortcut1:hover{
-    font-size: 19px;
+    font-size: 1.9rem;
     color: #fff;
     transition: all 0.2s;
 }
@@ -779,7 +789,7 @@ nav .submenu>li>a:hover {
     background-color: rgb(0, 128, 200);
 }
 .recruitment .recruit_wrap .shortcut_box .shortcut2:hover{
-    font-size: 19px;
+    font-size: 1.9rem;
     color: #fff;
     transition: all 0.2s;
 }
@@ -788,7 +798,7 @@ nav .submenu>li>a:hover {
     color: #fff;
 }
 .recruitment .recruit_wrap .shortcut_box .shortcut3:hover{
-    font-size: 19px;
+    font-size: 1.9rem;
     color: #fff;
     transition: all 0.2s;
 }
@@ -804,26 +814,26 @@ footer{
 }
 footer .f_logo {
     display: block;
-    width: 200px;
-    height: 80px;
-    margin: 30px;
+    width: 15%;
+    min-width: 200px;
 }
 footer .f_logo img{
     width: 200px;
 } 
 footer .f_right{
+    min-width: 600px;
     display: flex;
     flex-direction: column;
     color: #fff;
     align-items: left;
     justify-content: space-evenly;
-    margin-left: 200px;
+    margin-left: 10%;
 }
 footer .f_right .footer_menu ul{
     display: flex;
 }
 footer .f_right .footer_menu ul li{
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 20px;
     margin-right: 10px;
 }
@@ -831,14 +841,14 @@ footer .f_right .footer_text ul{
     display: flex;
 }
 footer .f_right .footer_text ul li{
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 20px;
     margin-right: 10px;
 }
 
 footer .f_right .copyright p{
     color: #fff;
-    font-size: 14px;
+    font-size: 1.4rem;
     line-height: 20px;
 }
 .fp-watermark{
@@ -869,7 +879,7 @@ footer .f_right .copyright p{
     opacity: 0;
     width: 80px;
     color: #fff;
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
     transform: translate(45px,-50%);
     transition: all 0.3s;
@@ -884,7 +894,7 @@ footer .f_right .copyright p{
     height: 20px;
     border-radius: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 2rem;
 }
 #nav_menu li::after {
     content: '';
